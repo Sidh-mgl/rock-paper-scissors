@@ -2,28 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rock paper scissors</title>
-    <link rel="stylesheet" href="rock.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
 </head>
 
 <body>
-    <h1 class="title">Rock-Paper-Scissors</h1>
-    <p class="display_text">welcome to game</p>
-    <p class="computer"></p>
-    <p class="statement"></p>
-    <div class="images">
-        <img src="rock.png" alt="rock" class="rock">
-        <img src="paper.png" alt="paper" class="paper">
-        <img src="sissors.png" alt="sissors" class="sissors">
+    <h1>CALCULATOR</h1>
+    <div class="calculator">
+        <input type="text" id="display">
+        <div class="button-container">
+            <button class="button" onclick="current_display = ''; document.querySelector('#display').value = current_display;
+">c</button>
+            <button class="button" onclick="let result = eval(current_display); 
+            current_display = result;
+            document.querySelector('#display').value = current_display;
+">=</button>
+            <button class="button" onclick="current_display = current_display + '*'; document.querySelector('#display').value = current_display;
+">*</button>
+            <div class="button-container">
+                <button class="button" onclick="current_display = current_display + '+'; document.querySelector('#display').value = current_display;
+">+</button>
+                <button class="button" onclick="current_display = current_display + '-'; document.querySelector('#display').value = current_display;
+">-</button>
+                <button class="button" onclick="current_display = current_display + '/'; document.querySelector('#display').value = current_display;
+">/</button>
+            </div>
+            <div class="button-container">
+                <button class="button" onclick="current_display = current_display +  1 ; document.querySelector('#display').value = current_display;
+">1</button>
+                <button class="button" onclick="current_display = current_display + 2; document.querySelector('#display').value = current_display;
+">2</button>
+                <button class="button" onclick="current_display = current_display + 3; document.querySelector('#display').value = current_display;
+">3</button>
+            </div>
+            <div class="button-container">
+                <button class="button" onclick="current_display = current_display + 4; document.querySelector('#display').value = current_display;
+">4</button>
+                <button class="button" onclick="current_display = current_display + 5; document.querySelector('#display').value = current_display;
+">5</button>
+                <button class="button" onclick="current_display = current_display + 6; document.querySelector('#display').value = current_display;
+">6</button>
+            </div>
+            <div class="button-container">
+                <button class="button" onclick="current_display = current_display + 7; document.querySelector('#display').value = current_display;
+">7</button>
+                <button class="button" onclick="current_display = current_display + 8; document.querySelector('#display').value = current_display;
+">8</button>
+                <button class="button" onclick="current_display = current_display + 9; document.querySelector('#display').value = current_display;
+">9</button>
+            </div>
+            <button class="button" onclick="current_display = current_display + '.'; document.querySelector('#display').value = current_display;
+">.</button>
+        </div>
     </div>
-    
+    <script>
+        let current_display = '0';
+        document.querySelector('#display').value = current_display;
+    </script>
 
-    <script src="rock.js"></script>
 </body>
 
 </html>
